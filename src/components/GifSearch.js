@@ -3,12 +3,12 @@ import React from "react";
 export default class GifSearch extends React.Component {
   constructor() {
     super();
-    this.state = { query: " " };
+    this.state = { query: "snake" };
   }
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.Submit(e);
+    this.props.Submit(this.state.query);
   };
 
   handleChange = e => {

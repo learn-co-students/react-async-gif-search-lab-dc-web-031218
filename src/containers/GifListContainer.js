@@ -9,9 +9,9 @@ export default class GifListContainer extends React.Component {
     };
   }
 
-  Submit = e => {
+  Submit = query => {
     fetch(
-      "https://api.giphy.com/v1/gifs/search?q=query&api_key=dc6zaTOxFJmzC&rating=g"
+      `https://api.giphy.com/v1/gifs/search?q=${query}&api_key=dc6zaTOxFJmzC&rating=g`
     )
       .then(resp => resp.json())
       .then(json => {
